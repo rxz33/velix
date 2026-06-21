@@ -1,0 +1,64 @@
+<svg width="1400" height="960" viewBox="0 0 1400 960" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1400" height="960" rx="28" fill="#F3F5FA"/>
+  <rect x="60" y="60" width="530" height="380" rx="28" fill="white"/>
+  <text x="92" y="118" fill="#131A28" font-family="Manrope, Arial, sans-serif" font-size="30" font-weight="700">Total Calls</text>
+  <text x="92" y="160" fill="#6C7687" font-family="Manrope, Arial, sans-serif" font-size="18">November</text>
+  <text x="480" y="160" fill="#6C7687" font-family="Manrope, Arial, sans-serif" font-size="18">December</text>
+  <path d="M94 302L146 264L196 272L246 204L298 310L350 290L400 220L452 238L506 248L548 156" stroke="#1F6DE3" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="92" y="366" fill="#131A28" font-family="Manrope, Arial, sans-serif" font-size="34" font-weight="800">651</text>
+  <text x="92" y="408" fill="#2DA44E" font-family="Manrope, Arial, sans-serif" font-size="18" font-weight="700">+2</text>
+  <text x="124" y="408" fill="#6C7687" font-family="Manrope, Arial, sans-serif" font-size="18">from previous period</text>
+
+  <rect x="618" y="60" width="350" height="160" rx="24" fill="white"/>
+  <text x="650" y="118" fill="#131A28" font-family="Manrope, Arial, sans-serif" font-size="28" font-weight="700">Scheduled Appointments</text>
+  <text x="650" y="176" fill="#131A28" font-family="Manrope, Arial, sans-serif" font-size="32" font-weight="800">441</text>
+  <text x="650" y="212" fill="#2DA44E" font-family="Manrope, Arial, sans-serif" font-size="18" font-weight="700">+22%</text>
+  <text x="712" y="212" fill="#6C7687" font-family="Manrope, Arial, sans-serif" font-size="18">from previous period</text>
+
+  <rect x="994" y="60" width="346" height="160" rx="24" fill="white"/>
+  <text x="1026" y="118" fill="#131A28" font-family="Manrope, Arial, sans-serif" font-size="28" font-weight="700">Resolution Rate</text>
+  <text x="1026" y="176" fill="#131A28" font-family="Manrope, Arial, sans-serif" font-size="32" font-weight="800">70%</text>
+  <text x="1026" y="212" fill="#2DA44E" font-family="Manrope, Arial, sans-serif" font-size="18" font-weight="700">+1.5%</text>
+  <text x="1100" y="212" fill="#6C7687" font-family="Manrope, Arial, sans-serif" font-size="18">from previous period</text>
+
+  <rect x="618" y="246" width="350" height="160" rx="24" fill="white"/>
+  <text x="650" y="304" fill="#131A28" font-family="Manrope, Arial, sans-serif" font-size="28" font-weight="700">Booking Rate</text>
+  <text x="650" y="362" fill="#131A28" font-family="Manrope, Arial, sans-serif" font-size="32" font-weight="800">90%</text>
+  <text x="650" y="398" fill="#2DA44E" font-family="Manrope, Arial, sans-serif" font-size="18" font-weight="700">+1,1%</text>
+  <text x="708" y="398" fill="#6C7687" font-family="Manrope, Arial, sans-serif" font-size="18">from previous period</text>
+
+  <rect x="994" y="246" width="346" height="160" rx="24" fill="white"/>
+  <text x="1026" y="304" fill="#131A28" font-family="Manrope, Arial, sans-serif" font-size="28" font-weight="700">Revenue Impact</text>
+  <text x="1026" y="362" fill="#131A28" font-family="Manrope, Arial, sans-serif" font-size="32" font-weight="800">$158,760</text>
+  <text x="1026" y="398" fill="#6C7687" font-family="Manrope, Arial, sans-serif" font-size="18">View Calculation</text>
+
+  <rect x="60" y="470" width="908" height="406" rx="28" fill="white"/>
+  <text x="92" y="532" fill="#131A28" font-family="Manrope, Arial, sans-serif" font-size="30" font-weight="700">Call Flow</text>
+  <path d="M104 592C250 606 452 584 744 560C788 557 740 724 744 718C520 724 284 736 104 728V592Z" fill="#DCE3F0"/>
+  <path d="M104 728C162 728 188 736 228 752C266 766 312 772 372 772C454 772 548 752 640 752C700 752 728 744 744 736" stroke="#DCE3F0" stroke-width="18" stroke-linecap="round"/>
+  <path d="M372 772C464 780 548 796 640 812C688 820 714 822 744 822" stroke="#DCE3F0" stroke-width="18" stroke-linecap="round"/>
+  <rect x="92" y="592" width="12" height="138" rx="4" fill="#1F6DE3"/>
+  <rect x="732" y="560" width="12" height="138" rx="4" fill="#45C1AA"/>
+  <rect x="732" y="718" width="12" height="12" rx="2" fill="#45C1AA"/>
+  <rect x="290" y="748" width="12" height="22" rx="2" fill="#35B88E"/>
+  <rect x="518" y="792" width="12" height="14" rx="2" fill="#F2AC34"/>
+  <rect x="732" y="816" width="12" height="14" rx="2" fill="#F35A58"/>
+  <text x="116" y="674" fill="#131A28" font-family="Manrope, Arial, sans-serif" font-size="22" font-weight="700">Total</text>
+  <text x="116" y="704" fill="#4C5668" font-family="Manrope, Arial, sans-serif" font-size="18" font-weight="700">372 calls</text>
+  <text x="760" y="580" fill="#131A28" font-family="Manrope, Arial, sans-serif" font-size="22" font-weight="700">Handled by AI</text>
+  <text x="760" y="610" fill="#4C5668" font-family="Manrope, Arial, sans-serif" font-size="18" font-weight="700">321 calls</text>
+  <text x="760" y="734" fill="#131A28" font-family="Manrope, Arial, sans-serif" font-size="22" font-weight="700">Answered</text>
+  <text x="760" y="764" fill="#4C5668" font-family="Manrope, Arial, sans-serif" font-size="18" font-weight="700">21 calls</text>
+  <text x="316" y="770" fill="#131A28" font-family="Manrope, Arial, sans-serif" font-size="22" font-weight="700">Transferred</text>
+  <text x="316" y="800" fill="#4C5668" font-family="Manrope, Arial, sans-serif" font-size="18" font-weight="700">51 calls</text>
+  <text x="516" y="842" fill="#131A28" font-family="Manrope, Arial, sans-serif" font-size="22" font-weight="700">Missed</text>
+  <text x="516" y="872" fill="#4C5668" font-family="Manrope, Arial, sans-serif" font-size="18" font-weight="700">30 calls</text>
+  <text x="760" y="822" fill="#131A28" font-family="Manrope, Arial, sans-serif" font-size="22" font-weight="700">Lost</text>
+  <text x="760" y="852" fill="#4C5668" font-family="Manrope, Arial, sans-serif" font-size="18" font-weight="700">30 calls</text>
+
+  <rect x="994" y="470" width="346" height="406" rx="28" fill="white"/>
+  <text x="1026" y="530" fill="#131A28" font-family="Manrope, Arial, sans-serif" font-size="30" font-weight="700">After Hours / Store Hours</text>
+  <path d="M1026 654C1068 650 1104 650 1136 662C1170 676 1182 734 1228 736C1274 738 1278 692 1310 628V804H1026V654Z" fill="#DFF2EE"/>
+  <path d="M1026 654C1068 650 1104 650 1136 662C1170 676 1182 734 1228 736C1274 738 1278 692 1310 628" stroke="#54C5B7" stroke-width="5" stroke-linecap="round"/>
+  <path d="M1026 766C1078 722 1122 706 1162 720C1200 734 1242 738 1270 646C1296 560 1328 676 1340 766" stroke="#3373F0" stroke-width="5" stroke-linecap="round"/>
+</svg>
