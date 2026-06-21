@@ -7,7 +7,7 @@ export default function Navbar() {
     <header className="top-nav">
       <BrandMark />
 
-      <nav className="nav-links" aria-label="Primary">
+      <nav className="nav-links">
         {links.map((link) => (
           <a key={link} href="#">
             {link}
@@ -19,6 +19,7 @@ export default function Navbar() {
         <a href="#" className="login-link">
           Login
         </a>
+
         <a href="#" className="demo-button">
           Book Demo
         </a>

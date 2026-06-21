@@ -1,4 +1,9 @@
-﻿@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap");
+
+:root {
+  font-family: "Manrope", sans-serif;
+}
+
 @import "tailwindcss";
 
 :root {
@@ -42,7 +47,7 @@ a {
 .page-shell {
   position: relative;
   min-height: 100vh;
-  overflow: hidden;
+  /* overflow: hidden; */
   padding: 22px 24px 40px;
 }
 
@@ -99,33 +104,54 @@ a {
 }
 
 .top-nav {
-  max-width: 1600px;
-  margin: 22px auto 92px;
-  padding: 18px 24px;
-  border-radius: 30px;
-  background: #25303d;
-  color: #fff;
+  position: sticky;
+  top: 16px;
+  z-index: 1000;
+
+  width: 100%;
+  max-width: 1280px;
+
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+
+  padding: 12px 20px;
+
+  background-color: rgba(10, 22, 34, 0.88);
+  backdrop-filter: blur(8px);
+
+  border-radius: 24px;
+
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 24px;
 }
 
 .brand-mark {
   display: inline-flex;
+  color: white;
   align-items: center;
   gap: 14px;
   font-size: 1.9rem;
   font-weight: 700;
   line-height: 1;
+  width: 120px;
 }
 
 .brand-mark-image {
-  width: 70px;
-  height: 70px;
-  object-fit: contain;
-  border-radius: 18px;
+  width: 44px;
+  height: 44px;
+
   background: white;
+  padding: 8px;
+  border-radius: 12px;
+
+  object-fit: contain;
+}
+
+.brand-mark span {
+  display: block;
+  color: white;
 }
 
 .nav-links,
@@ -135,25 +161,42 @@ a {
 }
 
 .nav-links {
-  gap: 46px;
-  font-size: 0.96rem;
-  font-weight: 600;
+  flex: 1;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 40px;
+
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.nav-links a {
+  color: white;
 }
 
 .nav-actions {
-  gap: 24px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
 }
 
 .login-link {
-  font-weight: 700;
+  color: white;
+  font-weight: 500;
 }
 
 .demo-button {
-  background: #fff;
-  color: #0f1d33;
-  padding: 13px 22px;
-  border-radius: 20px;
-  font-weight: 800;
+  background: white;
+  color: #0a1622;
+
+  padding: 12px 20px;
+
+  border-radius: 16px;
+
+  font-weight: 600;
 }
 
 .hero-layout {
@@ -187,6 +230,7 @@ a {
   position: relative;
   z-index: 1;
 }
+
 .pill-banner {
   display: inline-flex;
   align-items: center;
@@ -349,8 +393,13 @@ a {
 }
 
 @keyframes marquee {
-  from { transform: translateX(0); }
-  to { transform: translateX(-50%); }
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
 }
 
 .animate-marquee {
@@ -495,8 +544,8 @@ a {
   overflow: hidden;
   border-radius: 32px;
   background:
-    linear-gradient(180deg, rgba(255,255,255,0.62), rgba(241,245,251,0.9)),
-    repeating-linear-gradient(90deg, rgba(202, 219, 244, 0.28) 0 3px, rgba(255,255,255,0) 3px 23px);
+    linear-gradient(180deg, rgba(255, 255, 255, 0.62), rgba(241, 245, 251, 0.9)),
+    repeating-linear-gradient(90deg, rgba(202, 219, 244, 0.28) 0 3px, rgba(255, 255, 255, 0) 3px 23px);
   box-shadow: inset 0 0 0 1px rgba(223, 230, 240, 0.95);
 }
 
@@ -761,8 +810,8 @@ a {
   padding: 26px 28px 28px;
   border-radius: 32px;
   background:
-    linear-gradient(180deg, rgba(255,255,255,0.68), rgba(242,246,251,0.92)),
-    repeating-linear-gradient(90deg, rgba(206, 220, 242, 0.28) 0 3px, rgba(255,255,255,0) 3px 23px);
+    linear-gradient(180deg, rgba(255, 255, 255, 0.68), rgba(242, 246, 251, 0.92)),
+    repeating-linear-gradient(90deg, rgba(206, 220, 242, 0.28) 0 3px, rgba(255, 255, 255, 0) 3px 23px);
   box-shadow: inset 0 0 0 1px rgba(228, 234, 242, 0.95);
   display: flex;
   flex-direction: column;
@@ -1285,10 +1334,6 @@ a {
 }
 
 @media (max-width: 1280px) {
-  .top-nav {
-    margin-bottom: 56px;
-    padding: 18px 22px;
-  }
 
   .nav-links {
     gap: 24px;
@@ -1355,14 +1400,6 @@ a {
 
   .page-shell {
     padding: 16px 16px 110px;
-  }
-
-  .top-nav {
-    border-radius: 24px;
-    flex-wrap: wrap;
-    justify-content: center;
-    text-align: center;
-    margin-bottom: 40px;
   }
 
   .nav-links {
@@ -1535,11 +1572,14 @@ a {
 @media (max-width: 640px) {
   .brand-mark {
     font-size: 1.7rem;
+    color: white;
   }
 
   .brand-mark-image {
-    width: 58px;
-    height: 58px;
+    width: 93px;
+    color: white;
+    height: 32px;
+    object-fit: contain;
   }
 
   .demo-button,
@@ -1557,24 +1597,25 @@ a {
   }
 
   .small-banner {
-  position: relative;
-  display: inline-flex;
-  padding: 1px;
-  border-radius: 999px;
-  overflow: hidden;
-}
+    position: relative;
+    display: inline-flex;
+    padding: 1px;
+    border-radius: 999px;
+    overflow: hidden;
+  }
 
-.small-banner_gradient {
-  position: absolute;
-  inset: -40%;
-  background: conic-gradient(from 0deg, rgba(98, 200, 177, 0.75), rgba(188, 214, 255, 0.65), rgba(98, 200, 177, 0.75));
-}
+  .small-banner_gradient {
+    position: absolute;
+    inset: -40%;
+    background: conic-gradient(from 0deg, rgba(98, 200, 177, 0.75), rgba(188, 214, 255, 0.65), rgba(98, 200, 177, 0.75));
+  }
 
-.small-banner_inner {
-  position: relative;
-  z-index: 1;
-}
-.pill-banner {
+  .small-banner_inner {
+    position: relative;
+    z-index: 1;
+  }
+
+  .pill-banner {
     width: 100%;
     justify-content: center;
     text-align: center;
@@ -1668,12 +1709,12 @@ input[type="file"]:focus-visible {
   color: inherit;
 }
 
-.w-richtext > :not(div):first-child,
-.w-richtext > div:first-child > :first-child {
+.w-richtext> :not(div):first-child,
+.w-richtext>div:first-child> :first-child {
   margin-top: 0 !important;
 }
 
-.w-richtext > :last-child,
+.w-richtext> :last-child,
 .w-richtext ol li:last-child,
 .w-richtext ul li:last-child {
   margin-bottom: 0 !important;
@@ -1705,6 +1746,7 @@ input[type="file"]:focus-visible {
 }
 
 @media screen and (max-width: 991px) {
+
   .hide,
   .hide-tablet {
     display: none !important;
@@ -1930,13 +1972,23 @@ a:hover [link-arrow] {
 
 /* Added from pasted page-specific Webflow styles */
 @keyframes scrollLeft {
-  0% { transform: translateX(0%); }
-  100% { transform: translateX(-100%); }
+  0% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
 }
 
 @keyframes scrollRight {
-  0% { transform: translateX(-100%); }
-  100% { transform: translateX(0%); }
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(0%);
+  }
 }
 
 [scroll-direction="left"] {
@@ -1972,4 +2024,3 @@ a:hover [link-arrow] {
 .small-banner:hover .small-banner_inner {
   background-color: var(--f7fafd);
 }
-
