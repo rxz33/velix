@@ -1,5 +1,5 @@
 import { useRef, useState } from "react";
-import { Play, Pause, ArrowRight } from "lucide-react";
+import { ArrowRight, Pause, Play } from "lucide-react";
 
 export default function ListenSection() {
   const videoRef = useRef(null);
@@ -10,29 +10,26 @@ export default function ListenSection() {
 
     if (playing) {
       videoRef.current.pause();
-    } else {
-      videoRef.current.play();
+      setPlaying(false);
+      return;
     }
 
-    setPlaying(!playing);
+    videoRef.current.play();
+    setPlaying(true);
   };
 
   return (
-    <section className="bg-[#01050b] py-24 overflow-hidden">
-      <div className="max-w-7xl mx-auto px-6">
-
-        <div className="relative rounded-4xl overflow-hidden border border-white/10">
-
-          {/* Video */}
-          <div className="relative h-112.5 lg:h-150">
-
+    <section className="listen-section">
+      <div className="listen-shell">
+        <div className="listen-card">
+          <div className="listen-media">
             <video
               ref={videoRef}
               loop
               muted
               playsInline
               poster="https://cdn.prod.website-files.com/6934eb0f21f812d6aad9b413/6939114c95393219fba5c350_wave-anim-small_poster.0000000.jpg"
-              className="absolute inset-0 h-full w-full object-cover"
+              className="listen-video"
             >
               <source
                 src="https://cdn.prod.website-files.com/6934eb0f21f812d6aad9b413/6939114c95393219fba5c350_wave-anim-small_mp4.mp4"
@@ -40,46 +37,32 @@ export default function ListenSection() {
               />
             </video>
 
-            {/* Gradient Overlay */}
-            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_30%,rgba(1,5,11,0.3)_50%,rgba(1,5,11,0.7)_70%,#01050b_100%)]" />
+            <div className="listen-video-overlay" />
 
-            {/* Play Button */}
             <button
+              type="button"
               onClick={toggleVideo}
-              className="absolute top-6 left-6 z-20 flex items-center justify-center w-14 h-14 rounded-full bg-white text-black hover:scale-105 transition"
+              className="listen-play-button"
+              aria-label={playing ? "Pause audio preview" : "Play audio preview"}
             >
-              {playing ? (
-                <Pause size={22} />
-              ) : (
-                <Play size={22} fill="currentColor" />
-              )}
+              {playing ? <Pause size={34} /> : <Play size={34} fill="currentColor" />}
             </button>
+          </div>
 
-            {/* Content */}
-            <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-6 z-10">
+          <div className="listen-copy">
+            <h2>Listen to Velix</h2>
+            <p>
+              Velix delivers delightful and personalized conversations - always
+              available, endlessly patient, and able to reason, predict, and act
+              in real time.
+            </p>
 
-              <h2 className="text-white text-4xl md:text-5xl font-semibold mb-6">
-                Listen to Velix
-              </h2>
-
-              <p className="max-w-2xl text-white/70 text-lg leading-relaxed mb-8">
-                Velix delivers delightful and personalized conversations —
-                always available, endlessly patient, and able to reason,
-                predict, and act in real time.
-              </p>
-
-              <button className="group inline-flex items-center gap-2 bg-white text-black px-6 py-3 rounded-full font-medium">
-                Get Started
-                <ArrowRight
-                  size={18}
-                  className="transition-transform group-hover:translate-x-1"
-                />
-              </button>
-
-            </div>
+            <a href="#" className="listen-cta">
+              <span>Get started</span>
+              <ArrowRight size={18} />
+            </a>
           </div>
         </div>
-
       </div>
     </section>
   );

@@ -1,73 +1,87 @@
-export default function CaseStudies() {
-  const studies = [
-    {
-      logo: "/logos/glendale.png",
-      title: "The support has been absolutely stellar",
-      author: "Peter Kim, GM",
-      stat: "38 hrs",
-      label: "Saved Per Week",
-    },
-    {
-      logo: "/logos/freeman.png",
-      stat: "$100k",
-      label: "Incremental Profit",
-    },
-    {
-      logo: "/logos/san-leandro.png",
-      title:
-        "Our Service appointments have more than doubled and Service Advisors have more time to sell in the drive!",
-      author: "Carlos Hidalgo, GM",
-      stat: "+150",
-      label: "Additional Appointments",
-    },
-  ];
+﻿import { ArrowRight } from "lucide-react";
 
+const studies = [
+  {
+    brand: ["GLENDALE", "INFINITI."],
+    quote: "The support has been absolutely stellar",
+    author: "Peter Kim, GM",
+    stat: "38 hrs",
+    label: "Saved Per Week",
+    variant: "quote",
+  },
+  {
+    brand: ["FREEMAN LEXUS"],
+    stat: "$100k",
+    label: "Incremental Profit",
+    variant: "profit",
+  },
+  {
+    brand: ["SAN", "LEANDRO"],
+    quote:
+      "Our Service appointments have more than doubled and Service Advisors have more time to sell in the drive!",
+    author: "Carlos Hidalgo, GM",
+    stat: "+150",
+    label: "Additional Appointments",
+    variant: "quote-long",
+  },
+];
+
+function StudyLogo({ brand, centered = false }) {
   return (
-    <section className="py-24">
-      <div className="max-w-7xl mx-auto px-6">
-        <p className="text-gray-400 mb-4">Case studies</p>
+    <div className={`case-study-logo${centered ? " is-center" : ""}`}>
+      {brand.map((line) => (
+        <span key={line}>{line}</span>
+      ))}
+    </div>
+  );
+}
 
-        <h2 className="text-5xl font-semibold mb-16">
-          Trusted by industry leaders
-        </h2>
+export default function CaseStudies() {
+  return (
+    <section className="case-studies-section">
+      <div className="case-studies-shell">
+        <p className="case-studies-eyebrow">Case studies</p>
+        <h2 className="case-studies-heading">Trusted by industry leaders</h2>
 
-        <div className="grid md:grid-cols-3 gap-6">
-          {studies.map((item, index) => (
-            <div
-              key={index}
-              className="rounded-3xl border border-zinc-800 p-8 bg-zinc-900"
+        <div className="case-studies-grid">
+          {studies.map((study) => (
+            <article
+              key={`${study.brand.join("-")}-${study.stat}`}
+              className={`case-study-card case-study-${study.variant}`}
             >
-              <img
-                src={item.logo}
-                alt=""
-                className="h-10 object-contain mb-8"
-              />
+              <div className="case-study-top">
+                <StudyLogo
+                  brand={study.brand}
+                  centered={study.variant === "profit"}
+                />
 
-              {item.title && (
-                <>
-                  <h3 className="text-xl font-medium mb-4">
-                    "{item.title}"
-                  </h3>
-
-                  <p className="text-sm text-gray-400 mb-8">
-                    {item.author}
-                  </p>
-                </>
-              )}
-
-              <div>
-                <div className="text-4xl font-bold mb-2">
-                  {item.stat}
-                </div>
-
-                <p className="text-sm text-gray-400">
-                  {item.label}
-                </p>
+                <a
+                  href="#"
+                  className="case-study-arrow"
+                  aria-label={`Open ${study.brand.join(" ")} case study`}
+                >
+                  <ArrowRight size={30} />
+                </a>
               </div>
-            </div>
+
+              {study.quote ? (
+                <div className="case-study-copy">
+                  <h3>"{study.quote}"</h3>
+                  <p>{study.author}</p>
+                </div>
+              ) : null}
+
+              <div
+                className={`case-study-stat${study.variant === "profit" ? " is-centered" : ""}`}
+              >
+                <strong>{study.stat}</strong>
+                <span>{study.label}</span>
+              </div>
+            </article>
           ))}
         </div>
       </div>
     </section>
   );
 }
+

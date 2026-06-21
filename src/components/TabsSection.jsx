@@ -1,65 +1,66 @@
-// src/components/TabsSection.jsx
+﻿import { PhoneCall } from "lucide-react";
+import heroImage from "../assets/hero.png";
 
-import { useState } from "react";
+const SERVICE_VISUAL = {
+  eyebrow: "incoming call",
+  image: heroImage,
+  alt: "Velix service conversation preview",
+};
 
-export default function TabsSection({
-  heading,
-  tabs,
-}) {
-  const [active, setActive] = useState(0);
+function TabVisual({ heading }) {
+  return (
+    <div className="tabs-visual-card">
+      <div className="tabs-visual-eyebrow">
+        <PhoneCall size={18} strokeWidth={2.4} />
+        <span>{heading === "Service" ? SERVICE_VISUAL.eyebrow : "live outreach"}</span>
+      </div>
 
-  const current = tabs[active];
+      <img
+        src={SERVICE_VISUAL.image}
+        alt={SERVICE_VISUAL.alt}
+        className="tabs-visual-image"
+      />
+    </div>
+  );
+}
+
+export default function TabsSection({ heading, tabs }) {
+  const current = tabs[0];
 
   return (
-    <section className="py-24">
-      <div className="mx-auto max-w-7xl px-6">
-        <h2 className="mb-12 text-center text-5xl font-semibold">
-          {heading}
-        </h2>
+    <section className="tabs-section">
+      <div className="tabs-shell">
+        <h2 className="tabs-heading">{heading}</h2>
 
-        <div className="grid gap-10 lg:grid-cols-2">
-          {/* LEFT */}
-          <div className="space-y-4">
-            {tabs.map((tab, index) => (
-              <button
-                key={tab.title}
-                onClick={() => setActive(index)}
-                className={`w-full rounded-xl border p-5 text-left transition ${
-                  active === index
-                    ? "border-black bg-black text-white"
-                    : "border-gray-200"
-                }`}
-              >
-                {tab.title}
-              </button>
-            ))}
-          </div>
+        <div className="tabs-header-row" role="tablist" aria-label={`${heading} tabs`}>
+          {tabs.map((tab, index) => (
+            <button
+              key={tab.title}
+              type="button"
+              className={`tabs-header-tab custom-tab ${index === 0 ? "is-active" : ""}`}
+              aria-selected={index === 0}
+            >
+              <span className="tabs-header-line tab-loader_fill" />
+              <span>{tab.title}</span>
+            </button>
+          ))}
+        </div>
 
-          {/* RIGHT */}
-          <div className="rounded-2xl border border-gray-200 p-8">
-            <h3 className="mb-4 text-3xl font-semibold">
-              {current.title}
-            </h3>
+        <div className="tabs-content-grid">
+          <TabVisual heading={heading} />
 
-            <p className="mb-6 text-gray-600">
-              {current.description}
-            </p>
+          <div className="tabs-copy-panel">
+            <h3>{current.title}</h3>
+            <p>{current.description}</p>
 
-            <ul className="space-y-3">
+            <ul className="tabs-points-list">
               {current.points.map((point) => (
-                <li
-                  key={point}
-                  className="flex items-center gap-3"
-                >
-                  <span className="h-2 w-2 rounded-full bg-black" />
-                  {point}
+                <li key={point}>
+                  <span className="tabs-point-dot" />
+                  <span>{point}</span>
                 </li>
               ))}
             </ul>
-
-            <button className="mt-8 rounded-lg bg-black px-6 py-3 text-white">
-              Schedule a Call
-            </button>
           </div>
         </div>
       </div>

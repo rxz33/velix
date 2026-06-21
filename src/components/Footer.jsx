@@ -1,66 +1,64 @@
+﻿const pressLogos = ["TechCrunch", "Automotive News", "CAR DEALERSHIP GUY"];
+const linksOne = ["Privacy Policy", "Terms of Service", "Security"];
+const linksTwo = ["Service", "Sales", "Blog", "Case Studies"];
+const linksThree = ["Jobs", "Login"];
+
+function LinkedinMark() {
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden="true" className="site-footer-linkedin-icon">
+      <path
+        fill="currentColor"
+        d="M4.98 3.5a2.49 2.49 0 1 1 0 4.98 2.49 2.49 0 0 1 0-4.98ZM3 9h3.96v12H3V9Zm7.02 0H13.8v1.64h.05c.52-.98 1.8-2.02 3.7-2.02 3.96 0 4.69 2.61 4.69 6V21h-3.96v-5.67c0-1.35-.02-3.09-1.88-3.09-1.88 0-2.17 1.47-2.17 2.99V21h-3.96V9Z"
+      />
+    </svg>
+  );
+}
+
 export default function Footer() {
   return (
-    <footer className="border-t border-zinc-800 py-16">
-      <div className="max-w-7xl mx-auto px-6">
-
-        {/* Top */}
-        <div className="mb-16">
-          <p className="font-semibold mb-6">As seen in</p>
-
-          <div className="flex flex-wrap items-center gap-8 opacity-70">
-            <span>TechCrunch</span>
-            <span>Automotive News</span>
-            <span>Dealership Guy</span>
+    <footer className="site-footer">
+      <div className="site-footer-shell">
+        <div className="site-footer-top">
+          <p>As seen in</p>
+          <div className="site-footer-press">
+            {pressLogos.map((logo) => (
+              <span key={logo}>{logo}</span>
+            ))}
           </div>
         </div>
 
-        {/* Middle */}
-        <div className="grid md:grid-cols-4 gap-10 mb-16">
+        <div className="site-footer-divider" />
 
-          <div className="space-y-3">
-            <a href="#">Privacy Policy</a>
-            <a href="#" className="block">Terms of Service</a>
-            <a href="#" className="block">Security</a>
-          </div>
+        <div className="site-footer-middle">
+          <div className="site-footer-links">
+            <div>
+              {linksOne.map((item) => (
+                <a key={item} href="#">{item}</a>
+              ))}
+            </div>
 
-          <div className="space-y-3">
-            <a href="#">Service</a>
-            <a href="#" className="block">Sales</a>
-            <a href="#" className="block">Blog</a>
-            <a href="#" className="block">Case Studies</a>
-          </div>
+            <div>
+              {linksTwo.map((item) => (
+                <a key={item} href="#">{item}</a>
+              ))}
+            </div>
 
-          <div className="space-y-3">
-            <a href="#">Jobs</a>
-            <a href="#" className="block">Login</a>
-          </div>
-
-          <div>
-            <div className="border border-zinc-700 rounded-xl p-6 text-center">
-              <p className="text-sm text-zinc-400">
-                SOC 2 Certified
-              </p>
+            <div>
+              {linksThree.map((item) => (
+                <a key={item} href="#">{item}</a>
+              ))}
             </div>
           </div>
-
         </div>
 
-        {/* Bottom */}
-        <div className="flex flex-col md:flex-row justify-between items-center border-t border-zinc-800 pt-8">
+        <div className="site-footer-divider" />
 
-          <p className="text-sm text-zinc-500">
-            © 2026 Velix Technologies Inc. All rights reserved.
-          </p>
-
-          <a
-            href="#"
-            className="mt-4 md:mt-0 text-zinc-400 hover:text-white"
-          >
-            LinkedIn
+        <div className="site-footer-bottom">
+          <p>© 2026 Velix Technologies Inc. All rights reserved.</p>
+          <a href="#" aria-label="Velix LinkedIn">
+            <LinkedinMark />
           </a>
-
         </div>
-
       </div>
     </footer>
   );

@@ -1,33 +1,24 @@
+﻿import { ArrowRight, Phone } from "lucide-react";
+
 export default function CTA() {
   return (
-    <section className="py-32">
-      <div className="max-w-6xl mx-auto px-6">
-        <div className="border border-zinc-800 rounded-3xl p-12 md:p-20 text-center">
-          
-          <h2 className="text-4xl md:text-6xl font-semibold max-w-4xl mx-auto">
-            Ready to bring more customers to your dealership?
-          </h2>
+    <section className="closing-cta-section">
+      <div className="closing-cta-shell">
+        <h2>Ready to bring more customers to your dealership?</h2>
 
-          <div className="flex flex-col sm:flex-row justify-center gap-4 mt-10">
-            
-            <a
-              href="#"
-              className="px-8 py-4 bg-white text-black rounded-full font-medium hover:scale-105 transition"
-            >
-              Book a demo
-            </a>
+        <div className="closing-cta-actions">
+          <a href="#" className="closing-cta-primary">
+            <span>Book a demo</span>
+            <ArrowRight size={18} />
+          </a>
 
-            <a
-              href="#"
-              className="px-8 py-4 border border-zinc-700 rounded-full font-medium hover:bg-zinc-900 transition"
-            >
-              Talk to Velix
-            </a>
-
-          </div>
-
+          <a href="#" className="closing-cta-secondary">
+            <Phone size={20} />
+            <span>Talk to Velix</span>
+          </a>
         </div>
       </div>
     </section>
   );
 }
+
