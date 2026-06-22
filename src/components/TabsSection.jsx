@@ -1,8 +1,8 @@
 ﻿import { useState } from "react";
 
-import serviceImg from "../assets/Screenshot 2026-06-22 134156.png";
-import outreachImg from "../assets/Screenshot 2026-06-22 134210.png";
-import recallImg from "../assets/Screenshot 2026-06-22 134224.png";
+import serviceImg from "../assets/reach.png";
+import outreachImg from "../assets/mail.png";
+import recallImg from "../assets/mesg.png";
 
 const VISUALS = [
   { image: serviceImg },

@@ -665,31 +665,24 @@ a {
 
 .tabs-content-grid {
   display: grid;
-  grid-template-columns: minmax(0, 0.98fr) minmax(0, 0.72fr);
-  gap: 84px;
-  align-items: center;
-  margin-top: 52px;
+  grid-template-columns: 55% 45%;
+  align-items: start;
+  gap: 4rem;
+  margin-top: 2rem;
 }
 
 .tabs-visual-card {
-  position: relative;
-  min-height: 720px;
-  overflow: hidden;
-  border-radius: 32px;
+  width: 100%;
 }
 
 .tabs-visual-image {
-  position: absolute;
-  left: 50%;
-  /* top: 124px; */
-  width: min(82%, 720px);
-  height: auto;
-  transform: translateX(-50%);
-  border-radius: 26px;
+  width: 100%;
+  display: block;
+  border-radius: 32px;
 }
 
 .tabs-copy-panel {
-  padding-right: 18px;
+  padding-top: 4rem; /* moves text lower like Flai */
 }
 
 .tabs-copy-panel h3 {
@@ -1476,7 +1469,6 @@ a {
   }
 
   .hero-layout,
-  .tabs-content-grid,
   .faq-shell,
   .site-footer-middle {
     grid-template-columns: 0.85fr 1fr;
@@ -1490,9 +1482,9 @@ a {
     margin-top: 72px;
   }
 
-  .tabs-copy-panel {
+  /* .tabs-copy-panel {
     padding-right: 0;
-  }
+  } */
 
   .feature-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -1560,38 +1552,6 @@ a {
   .statement-section {
     min-height: auto;
     padding-top: 46px;
-  }
-
-  .tabs-section {
-    padding-top: 24px;
-  }
-
-  .tabs-shell,
-  .listen-shell {
-    padding: 0 12px;
-  }
-
-  .tabs-header-row {
-    grid-template-columns: 1fr;
-    gap: 18px;
-  }
-
-  .tabs-content-grid {
-    gap: 42px;
-  }
-
-  .tabs-visual-card {
-    min-height: 540px;
-    min-width: 100px;
-  }
-
-  .tabs-visual-eyebrow {
-    top: 404px;
-  }
-
-  .tabs-visual-image {
-    top: 88px;
-    width: 88%;
   }
 
   .listen-media {
@@ -2109,21 +2069,22 @@ a:hover [link-arrow] {
 ========================= */
 
 .tabs-section {
-  padding: 8rem 0;
+  padding: 1rem 0;
 }
 
 .tabs-shell {
-  max-width: 1400px;
+  max-width: 1280px;
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 0 1rem;
 }
 
 .tabs-heading {
   text-align: center;
-  font-size: clamp(3rem, 5vw, 5rem);
+  font-size: 3.3rem;
   font-weight: 500;
   color: #0d1c2b;
-  margin-bottom: 4rem;
+  margin-top: 10rem;
+  margin-bottom: 2rem;
 }
 
 /* =========================
@@ -2133,25 +2094,26 @@ a:hover [link-arrow] {
 .tabs-header-row {
   display: flex;
   justify-content: center;
-  gap: 1.5rem;
   width: 100%;
-  margin-bottom: 4rem;
+  gap: 1.5rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
 .tabs-header-tab {
   width: 100%;
-  max-width: 18.75rem;
+  max-width: 20.75rem;
   background: transparent;
   border: none;
   cursor: pointer;
   position: relative;
-  padding-top: 0.75rem;
+  /* padding-top: 0.75rem; */
   color: #4e565e;
-  text-align: center;
+  text-align: left;
 }
 
 .tabs-header-tab span:last-child {
-  font-size: 1.25rem;
+  font-size: 1.2rem;
   font-weight: 500;
   line-height: 1.4;
 }
@@ -2196,7 +2158,7 @@ a:hover [link-arrow] {
 .tabs-content-grid {
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
-  gap: 5rem;
+  /* gap: 5rem; */
   align-items: center;
 }
 
@@ -2237,13 +2199,13 @@ a:hover [link-arrow] {
 }
 
 .tabs-copy-panel h3 {
-  font-size: 2rem;
-  font-weight: 600;
+  font-size: 2.7rem;
+  font-weight: 500;
   color: #0d1c2b;
 }
 
 .tabs-copy-panel p {
-  font-size: 1.125rem;
+  font-size: 1.25rem;
   color: #4e565e;
   line-height: 1.7;
 }
@@ -2257,7 +2219,7 @@ a:hover [link-arrow] {
   padding: 0;
   margin: 0;
 
-  display: flex;
+  /* display: flex; */
   flex-direction: column;
   gap: 1rem;
 }
