@@ -32,7 +32,7 @@ export default function FeatureSection() {
           <h2>Turn every lead into an appointment</h2>
           <p>
             The only AI communications platform built from the ground up to
-            feel human and deeply integrated with your existing systems to
+            feel human and deeply <br/> integrated with your existing systems to
             reliably turn every lead into an appointment.
           </p>
         </div>

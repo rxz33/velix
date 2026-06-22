@@ -5,7 +5,7 @@ const faqs = [
   {
     question: "How does the Voice AI work for dealerships?",
     answer:
-      "Our Voice AI acts like your best sales rep, handling incoming calls 24/7. It can schedule service appointments, transfer to the right team member, book test drives, answer common questions about inventory, and qualify leads. All conversations are recorded and the AI learns your dealership's specific processes.",
+      "Velix Voice AI acts like your best sales rep, handling incoming calls 24/7. It schedules service appointments, transfers to the right team member, books test drives, answers common inventory questions, and qualifies leads. All conversations are recorded and Velix learns your dealership's specific processes.",
   },
   {
     question: "Will customers know they're talking to AI?",

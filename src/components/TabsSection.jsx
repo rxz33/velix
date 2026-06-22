@@ -1,23 +1,21 @@
-﻿import { PhoneCall } from "lucide-react";
-import heroImage from "../assets/Screenshot 2026-06-22 134156.png";
+﻿import { useState } from "react";
 
-const SERVICE_VISUAL = {
-  eyebrow: "incoming call",
-  image: heroImage,
-  alt: "Velix service conversation preview",
-};
+import serviceImg from "../assets/Screenshot 2026-06-22 134156.png";
+import outreachImg from "../assets/Screenshot 2026-06-22 134210.png";
+import recallImg from "../assets/Screenshot 2026-06-22 134224.png";
 
-function TabVisual({ heading }) {
+const VISUALS = [
+  { image: serviceImg },
+  { image: outreachImg },
+  { image: recallImg },
+];
+
+function TabVisual({ visual }) {
   return (
     <div className="tabs-visual-card">
-      <div className="tabs-visual-eyebrow">
-        <PhoneCall size={18} strokeWidth={2.4} />
-        <span>{heading === "Service" ? SERVICE_VISUAL.eyebrow : "live outreach"}</span>
-      </div>
-
       <img
-        src={SERVICE_VISUAL.image}
-        alt={SERVICE_VISUAL.alt}
+        src={visual.image}
+        alt=""
         className="tabs-visual-image"
       />
     </div>
@@ -25,32 +23,50 @@ function TabVisual({ heading }) {
 }
 
 export default function TabsSection({ heading, tabs }) {
-  const current = tabs[0];
+  const [activeTab, setActiveTab] = useState(0);
+
+  const current = tabs[activeTab];
+  const currentVisual = VISUALS[activeTab];
 
   return (
     <section className="tabs-section">
       <div className="tabs-shell">
+
         <h2 className="tabs-heading">{heading}</h2>
 
-        <div className="tabs-header-row" role="tablist" aria-label={`${heading} tabs`}>
+        <div
+          className="tabs-header-row"
+          role="tablist"
+          aria-label={`${heading} tabs`}
+        >
           {tabs.map((tab, index) => (
             <button
               key={tab.title}
               type="button"
-              className={`tabs-header-tab custom-tab ${index === 0 ? "is-active" : ""}`}
-              aria-selected={index === 0}
+              onClick={() => setActiveTab(index)}
+              className={`tabs-header-tab ${
+                activeTab === index ? "is-active" : ""
+              }`}
             >
-              <span className="tabs-header-line tab-loader_fill" />
-              <span>{tab.title}</span>
+              <div className="tab-loader">
+                <div className="tab-loader_fill" />
+              </div>
+
+              <div className="tab_desc">
+                <span>{tab.title}</span>
+              </div>
             </button>
           ))}
         </div>
 
         <div className="tabs-content-grid">
-          <TabVisual heading={heading} />
+
+          <TabVisual visual={currentVisual} />
 
           <div className="tabs-copy-panel">
+
             <h3>{current.title}</h3>
+
             <p>{current.description}</p>
 
             <ul className="tabs-points-list">
@@ -61,7 +77,19 @@ export default function TabsSection({ heading, tabs }) {
                 </li>
               ))}
             </ul>
+
+            <div className="tabs-buttons">
+              <a href="#" className="primary-btn">
+                Schedule a Call
+              </a>
+
+              <a href="#" className="secondary-btn">
+                Learn More
+              </a>
+            </div>
+
           </div>
+
         </div>
       </div>
     </section>

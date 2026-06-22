@@ -40,7 +40,7 @@ export default function Integrations() {
           <div className="integrations-copy">
             <h2>Seamless system integration</h2>
             <p>
-              We integrate with your existing dealership technology stack,
+              We integrate with your existing dealership technology stack, <br/>
               including your scheduler, DMS, and CRM.
             </p>
 
