@@ -4,7 +4,7 @@ export default function CTA() {
   return (
     <section className="closing-cta-section">
       <div className="closing-cta-shell">
-        <h2>Ready to bring more customers to your dealership?</h2>
+        <h2>Ready to bring more<br/> customers to your dealership?</h2>
 
         <div className="closing-cta-actions">
           <a href="#" className="closing-cta-primary">

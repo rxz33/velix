@@ -53,7 +53,7 @@ export default function ListenSection() {
             <h2>Listen to Velix</h2>
             <p>
               Velix delivers delightful and personalized conversations - always
-              available, endlessly patient, and able to reason, predict, and act
+              available,<br/> endlessly patient, and able to reason, predict, and act
               in real time.
             </p>
 

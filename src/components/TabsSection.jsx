@@ -1,5 +1,5 @@
 ﻿import { PhoneCall } from "lucide-react";
-import heroImage from "../assets/hero.png";
+import heroImage from "../assets/Screenshot 2026-06-22 134156.png";
 
 const SERVICE_VISUAL = {
   eyebrow: "incoming call",

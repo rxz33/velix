@@ -31,7 +31,7 @@ export default function LogoShowcase() {
         <div
           className="logo-marquee-track"
           scroll-direction="left-slow"
-          style={{ "--scroll-duration": "30s" }}
+          style={{ "--scroll-duration": "50s" }}
         >
           {marqueeLogos.map((logo, index) => (
             <div key={`${logo.alt}-${index}`} className="logo-marquee-item">

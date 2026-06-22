@@ -6,13 +6,13 @@ export default function Statement() {
 
       <div className="statement-content">
         <p className="statement-line statement-line-primary">
-          Your best people know exactly how to turn an opportunity into an
-          appointment. The problem is they can't be everywhere.
+          Your best people know exactly how to turn an opportunity into <br/> an 
+          <strong> appointment.</strong> The problem is they can't be everywhere.
         </p>
 
         <p className="statement-line statement-line-secondary">
           Velix takes care of <strong>calls, SMS,</strong> and <strong>email</strong>
-          {" "}before your team takes care of customers.
+          {" "}before your team <br/> takes care of customers.
         </p>
       </div>
     </section>

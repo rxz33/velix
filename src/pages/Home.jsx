@@ -15,23 +15,26 @@ import FloatingCall from "../components/FloatingCall";
 export default function Home() {
   return (
     <main className="page-shell">
-      <div className="bg-orb bg-orb-left" />
-      <div className="bg-orb bg-orb-right" />
-      <div className="bg-slice" />
-
       <Navbar />
-      <Hero />
-      <LogoShowcase />
-      <Statement />
-      <HomeTabs />
-      <ListenSection />
-      <FeatureSection />
-      <CaseStudies />
-      <Integrations />
-      <Faq />
-      <CTA />
-      <Footer />
-      <FloatingCall />
+
+      <div className="page-content">
+        <div className="bg-orb bg-orb-left" />
+        <div className="bg-orb bg-orb-right" />
+        <div className="bg-slice" />
+
+        <Hero />
+        <LogoShowcase />
+        <Statement />
+        <HomeTabs />
+        <ListenSection />
+        <FeatureSection />
+        <CaseStudies />
+        <Integrations />
+        <Faq />
+        <CTA />
+        <Footer />
+        <FloatingCall />
+      </div>
     </main>
   );
 }
