@@ -328,11 +328,12 @@ a {
 
 .small-banner {
   position: relative;
+  top: -20px;
   width: fit-content;
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  padding: 1.5px;
+  padding: 2px;
   border-radius: 999px;
   overflow: hidden;
 }
@@ -366,7 +367,7 @@ a {
 }
 
 .small-banner_text {
-  font-size: 1rem;
+  font-size: 1.1rem;
   font-weight: 500;
   line-height: 1.55;
 }
