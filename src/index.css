@@ -2443,3 +2443,25 @@ a:hover [link-arrow] {
     gap: 16px;
   }
 }
+
+@media (max-width: 768px) {
+  .heading-style-h1 {
+    font-size: 42px !important;
+    line-height: 1 !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-description {
+    font-size: 18px !important;
+    line-height: 1.6 !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .small-banner {
+    position: relative;
+    top: -13px;
+    left: -10px;
+  }
+}
