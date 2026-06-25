@@ -5,12 +5,12 @@ const faqs = [
   {
     question: "How does the Voice AI work for dealerships?",
     answer:
-      "Velix Voice AI acts like your best sales rep, handling incoming calls 24/7. It schedules service appointments, transfers to the right team member, books test drives, answers common inventory questions, and qualifies leads. All conversations are recorded and Velix learns your dealership's specific processes.",
+      "USEFLAI Voice AI acts like your best sales rep, handling incoming calls 24/7. It schedules service appointments, transfers to the right team member, books test drives, answers common inventory questions, and qualifies leads. All conversations are recorded and USEFLAI learns your dealership's specific processes.",
   },
   {
     question: "Will customers know they're talking to AI?",
     answer:
-      "Yes. Velix is transparent when it is AI-powered, while still sounding natural and helpful. When needed, it can hand the conversation off to your staff without losing context.",
+      "Yes. USEFLAI is transparent when it is AI-powered, while still sounding natural and helpful. When needed, it can hand the conversation off to your staff without losing context.",
   },
   {
     question: "Can the AI handle multiple calls at once?",
@@ -25,7 +25,7 @@ const faqs = [
   {
     question: "Is this secure and compliant?",
     answer:
-      "Yes. Velix uses enterprise-grade security practices, controlled access, and infrastructure designed for reliability and compliance-conscious teams.",
+      "Yes. USEFLAI uses enterprise-grade security practices, controlled access, and infrastructure designed for reliability and compliance-conscious teams.",
   },
 ];
 
@@ -38,13 +38,13 @@ export default function Faq() {
         <div className="faq-left">
           <div className="faq-left-content">
             <p>Have any questions?</p>
-            <a href="mailto:hello@velix.ai">Contact us</a>
+            <a href="#">Contact us</a>
           </div>
         </div>
 
         <div className="faq-panel">
           <h2>Frequently asked questions</h2>
-          <p className="faq-subtitle">Everything you need to know about Velix</p>
+          <p className="faq-subtitle">Everything you need to know about USEFLAI</p>
 
           <div className="faq-list">
             {faqs.map((faq, index) => {

@@ -36,7 +36,7 @@ export const salesTabs = [
   {
     title: "Lead Follow-ups",
     description:
-      "Velix follows up instantly like your best sales rep.",
+      "USEFLAI follows up instantly like your best sales rep.",
     points: [
       "Checks inventory",
       "Human escalation when needed",

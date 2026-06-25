@@ -4,7 +4,7 @@ export default function FloatingCall() {
   return (
     <a href="#" className="floating-call">
       <Phone size={20} />
-      <span>Talk to Velix</span>
+      <span>Talk to USEFLAI</span>
     </a>
   );
 }

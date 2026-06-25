@@ -11,7 +11,7 @@ export default function Statement() {
         </p>
 
         <p className="statement-line statement-line-secondary">
-          Velix takes care of <strong>calls, SMS,</strong> and <strong>email</strong>
+          USEFLAI takes care of <strong>calls, SMS,</strong> and <strong>email</strong>
           {" "}before your team <br/> takes care of customers.
         </p>
       </div>

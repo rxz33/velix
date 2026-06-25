@@ -14,7 +14,7 @@ export default function CTA() {
 
           <a href="#" className="closing-cta-secondary">
             <Phone size={20} />
-            <span>Talk to Velix</span>
+            <span>Talk to USEFLAI</span>
           </a>
         </div>
       </div>

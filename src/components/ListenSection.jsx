@@ -50,9 +50,9 @@ export default function ListenSection() {
           </div>
 
           <div className="listen-copy">
-            <h2>Listen to Velix</h2>
+            <h2>Listen to USEFLAI</h2>
             <p>
-              Velix delivers delightful and personalized conversations - always
+              USEFLAI delivers delightful and personalized conversations - always
               available,<br/> endlessly patient, and able to reason, predict, and act
               in real time.
             </p>

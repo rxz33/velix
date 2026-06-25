@@ -36,7 +36,7 @@ export default function Hero() {
 
             <a href="#" className="secondary-cta">
               <Phone size={20} />
-              <span>Talk to Velix</span>
+              <span>Talk to USEFLAI</span>
             </a>
           </div>
         </div>

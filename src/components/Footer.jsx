@@ -54,8 +54,8 @@ export default function Footer() {
         <div className="site-footer-divider" />
 
         <div className="site-footer-bottom">
-          <p>© 2026 Velix Technologies Inc. All rights reserved.</p>
-          <a href="#" aria-label="Velix LinkedIn">
+          <p>© 2026 USEFLAI Technologies Inc. All rights reserved.</p>
+          <a href="#" aria-label="USEFLAI LinkedIn">
             <LinkedinMark />
           </a>
         </div>
